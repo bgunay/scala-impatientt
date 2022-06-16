@@ -1,6 +1,7 @@
 package second_edition.ch7
 
-import ch7.random.{nextDouble, nextInt, setSeed}
+import scala.util.Random.{nextDouble, nextInt, setSeed}
+
 
 object Ex3 extends App {
   for (i <- 0 until 10) {

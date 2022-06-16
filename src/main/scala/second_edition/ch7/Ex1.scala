@@ -2,9 +2,9 @@ package ch7
 
 object Ex1 extends App {
   import ch7.com.xpyct.impatient.A
-  assert(new A().m.getClass.getPackageName == "scala.collection.mutable")
+  assert(new A().m.getClass.getPackage.getName == "scala.collection.mutable")
   import ch7.com.xpyct.impatient.B
-  assert(new B().m.getClass.getPackageName == "ch7.com.collection.mutable")
+  assert(new B().m.getClass.getPackage.getName == "ch7.com.collection.mutable")
 }
 
 package com.collection.mutable {
