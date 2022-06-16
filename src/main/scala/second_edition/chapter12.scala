@@ -47,12 +47,11 @@ object chapter12 extends App {
   largest(x => 10 * x - x * x, 1 to 10)
 
   // 6
-  def largestAt(fun: Int => Int, inputs: Seq[Int]) =
-    inputs.
-      map(v => (v, fun(v))).
-      reduceLeft((p1, p2) => if (p1._2 > p2._2) p1 else p2)._1
+  def largestAt(fun: Int => Int, inputs: Seq[Int]): Int = {
+    inputs.map(input => Tuple2(input, fun(input))).maxBy(_._2)._1
+  }
 
-  largestAt(x => 10 * x - x * x, 1 to 10)
+  println(largestAt(x => 10 * x - x * x, 1 to 10))
 
   // 7
   def adjustToPair(fun: (Int, Int) => Int) =
